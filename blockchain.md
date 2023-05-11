@@ -1,15 +1,15 @@
 # Blockchain implementation
-Since the requirements are very vague, there were many assumption.
+Since the requirements are very vague, there were many assumptions.
 
-Also nonce (proof) wasn't implemented as well as mining algorithm. Don't know if it is required.
+Also, nonce (proof) and the mining algorithm weren't implemented. It isn't required.
 
-Linked list was implemented to chain Blocks.
+The linked list was implemented to chain Blocks.
 
-New block is added to the head.
+A new block is added to the head.
 
-During add, new block validates previous hash and in case of mismatch block is not added.
+During add, a new block validates the previous hash, and the league is not counted in case of a mismatch.
 
-There is also a tail pointer in case we need access genesis.
+There is also a tail pointer in case we need access to Genesis.
 
 Adding block time complexity is O(1)
 Getting a block by index takes O(n)

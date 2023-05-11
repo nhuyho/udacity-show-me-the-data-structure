@@ -1,8 +1,8 @@
-# Active directory look up implementation
+# Active directory lookup implementation
 
 The structure is a general tree structure.
-Thus I decided to use BFS traversing using Queue as a helper data structure.
+I decided to use BFS traversing using Queue as a helper data structure.
 
-Time complexity of the traversal is O(m*n) where m is a number of users and n is a number of groups.
+The time complexity of the traversal is O(m*n), where m is the number of users and n is the number of groups.
 
-Space complexity is O(n) where n is max(of groups on levels) since on each level we queue all groups of the next level.
+Space complexity is O(n) where n is max(of groups on levels) since, on each level, we queue all groups of the next level.

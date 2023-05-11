@@ -23,16 +23,12 @@ class Block:
         sha.update(sha_str.encode('utf-8'))
         return sha.hexdigest()
 
-    def __str__(self):
-        width = 15
-        s = '=' * width + '\n'
-        s += f"  index    : {self.index}\n"
-        s += f"  timestamp: {self.timestamp}\n"
-        s += f"  data     : {self.data}\n"
-        s += f"  hash     : {self.hash}\n"
-        s += f"  prev hash: {self.previous_hash}\n"
-        s += '=' * width + '\n'
-        return s 
+    def __repr__(self):
+        repr_str  = 'block hash: {}'.format(self.hash)
+        repr_str += '\nprevious hash: {}'.format(self.previous_hash)
+        repr_str += '\ntimestamp: {}'.format(self.timestamp)
+        repr_str += '\nblock data: {}'.format(self.data)
+        return repr_str
 
 class Blockchain:
     def __init__(self):
